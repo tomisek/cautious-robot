@@ -71,6 +71,7 @@ function onItemMark() {
        //OMG
        //I have no idea
        //This is so much fun
+       //Sesty pokus
     })
 } 
 
