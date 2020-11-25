@@ -68,6 +68,7 @@ function onItemMark() {
     $("li").click(function () {
         $(this).css("background-color", "lightblue");
        //here we have to code more
+       //OMG
     })
 } 
 
