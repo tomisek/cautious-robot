@@ -67,7 +67,7 @@ function deleteItem() {
 function onItemMark() { 
     $("li").click(function () {
         $(this).css("background-color", "lightblue");
-        $(this).css("opacity", "0.3");
+       
     })
 } 
 
