@@ -70,6 +70,7 @@ function onItemMark() {
        //here we have to code more
        //OMG
        //I have no idea
+       //This is so much fun
     })
 } 
 
