@@ -69,6 +69,7 @@ function onItemMark() {
         $(this).css("background-color", "lightblue");
        //here we have to code more
        //OMG
+       //I have no idea
     })
 } 
 
