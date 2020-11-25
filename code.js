@@ -73,6 +73,7 @@ function onItemMark() {
        //This is so much fun
        //Sesty pokus
        //sedmy pokus
+       //Osmicka
     })
 } 
 
