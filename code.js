@@ -75,6 +75,7 @@ function onItemMark() {
        //sedmy pokus
        //Osmicka
        //Devitka
+       //Desitka
     })
 } 
 
