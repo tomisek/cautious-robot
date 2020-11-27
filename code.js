@@ -67,16 +67,8 @@ function deleteItem() {
 function onItemMark() { 
     $("li").click(function () {
         $(this).css("background-color", "lightblue");
-       //here we have to code more
-       //OMG
-       //I have no idea
-       //This is so much fun
-       //Sesty pokus
-       //sedmy pokus
-       //Osmicka
-       //Devitka
-       //Desitka
-       //Jedenactka
+        $(this).css("text-decoration", "line-through");    
+        $(this).css("list-style-image", "url('/images/checkmark.png')");
     })
 } 
 
