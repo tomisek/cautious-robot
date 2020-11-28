@@ -7,5 +7,10 @@ span {
     list-style: none;
     width: 150px;
   }
+  .main{
+      background-color: lightblue;
+      text-decoration: line-through;
+      list-style-image: url('/images/checkmark.png');
+  }
 
   

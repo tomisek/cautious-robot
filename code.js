@@ -3,15 +3,18 @@ let eventList = [];
 function populateList() {
 
     let item = {
-        item: "Handla mat"
+        item: "Handla mat",
+        checked: "main"
     }
 
     let item2 = {
-        item: "Gå till gymmet"
+        item: "Gå till gymmet",
+        checked: ""
     }
 
     let item3 = {
-        item: "Skjutsa Viktor"
+        item: "Skjutsa Viktor",
+        checked: ""
     }
 
     eventList.push(item);
@@ -26,6 +29,7 @@ $("#form").submit(function (event) {
 
     let itemToAdd = {
         item: userInput,
+        checked: ""
     }
 
     if (!userInput) {
@@ -43,12 +47,12 @@ function displayList() {
     list.empty();//man tömmer listan för att undvika dubletter
 
     for (let i = 0; i < eventList.length; i++) {
-        list.append(`<li> ${eventList[i].item}   <span> X </span></li><br>`);
+        list.append(`<li class=${eventList[i].checked}>  ${eventList[i].item} <span> X </span></li><br>`);
     }
 
     deleteItem();
     onItemMark();
-    
+
 }
 
 function deleteItem() {
@@ -64,13 +68,26 @@ function deleteItem() {
 }
 
 
-function onItemMark() { 
-    $("li").click(function () {
-        $(this).css("background-color", "lightblue");
-        $(this).css("text-decoration", "line-through");    
-        $(this).css("list-style-image", "url('/images/checkmark.png')");
-    })
-} 
+function onItemMark() {
+    let allMarkedItems = $("li");
+
+    for (let i = 0; i < allMarkedItems.length; i++) {
+        $(allMarkedItems[i]).click(function () {
+            $(allMarkedItems[i]).toggleClass("main");
+            console.log(allMarkedItems);
+
+            if (eventList[i].checked === "main") {
+                eventList[i].checked = "";
+            } else if (eventList[i].checked === "") {
+                eventList[i].checked = "main";
+            }
+            console.log(eventList);
+
+        })
+        
+    }
+}
+
 
 
 populateList();
